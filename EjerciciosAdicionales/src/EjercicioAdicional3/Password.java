@@ -6,8 +6,19 @@ public class Password {
 	private int longitud = 8;
 	private String contraseña;
 	
-	
-	
+	//Getters and setters
+	public int getLongitud() {
+		return longitud;
+	}
+
+	public void setLongitud(int longitud) {
+		this.longitud = longitud;
+	}
+
+	public String getContraseña() {
+		return contraseña;
+	}
+
 	//Constructor por defecto
 	public Password() {
 		super();
