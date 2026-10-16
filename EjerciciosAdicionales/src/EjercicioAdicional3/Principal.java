@@ -27,6 +27,8 @@ public class Principal {
 		//Bucle para mostrar todas las contraseñas que hayan en el ArrayList de contraseñas
 		for (Password a : contrasenyas) {
 			System.out.println("La contraseña es: " + a.getContraseña());
+			
+			//Mostramos si la password es fuerte o no
 			if (a.esFuerte()) {
 				System.out.println("La contraseña es fuerte");
 			}else {
