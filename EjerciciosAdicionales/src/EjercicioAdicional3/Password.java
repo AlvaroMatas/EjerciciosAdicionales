@@ -48,6 +48,36 @@ public class Password {
 		return this.contraseña = password;
 	}
 	
+	//metodo que devuelve true si la contraseña tiene mas de 5 numeros, mas de 2 mayusculas y mas de 1 minuscula, sino devuelve false
+	public boolean esFuerte() {
+		//Tenemos que recorrer toda la contraseña e ir sumando si es mayuscula minuscula o numero en variables
+		int minusculas = 0;
+		int mayusculas = 0;
+		int numeros = 0;
+		
+		boolean esFuerte = true;
+		
+		for (int i = 0; i < getContraseña().length(); i++) {
+			char caracter = getContraseña().charAt(i);
+			
+			if (Character.isUpperCase(caracter)) {
+				mayusculas++;
+			}else if (Character.isLowerCase(caracter)) {
+				minusculas++;
+			}else if (Character.isDigit(caracter)){ //Dice si el caracter es un numero
+				numeros++;
+			}
+		}
+		
+		if (minusculas > 1 && mayusculas > 2 && numeros > 5) {
+			return esFuerte = true;
+		}else {
+			return esFuerte = false;
+		}
+		
+		
+	}
+	
 	
 	
 
